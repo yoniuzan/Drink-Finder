@@ -1,0 +1,18 @@
+<div class="drink-search">
+
+    <div class="">
+        <button type="button" class="btn btn-primary" (click)="onPressSearch()">Search</button>
+
+        <input type="text" placeholder="Search" class="form-control search-input" [(ngModel)]="_searchDrink">
+    </div>
+
+    <ng-container *ngIf="_prevSearch.length > 0">
+        <ul class="drinks-results__list list-group">
+            <li *ngFor="let drink of _prevSearch" class="list-group-item" (click)="onPrevSearch(drink)">
+                <span class="drinks-results__item">{{drink}}</span>
+            </li>
+
+        </ul>
+        <span> {{_numberOfPrevSearch}} last search</span>
+    </ng-container>
+</div>

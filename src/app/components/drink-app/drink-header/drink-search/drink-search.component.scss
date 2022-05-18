@@ -1,0 +1,16 @@
+.drink-search {
+    width: 100%;
+
+    ul {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+
+        &__list {
+            width: 100%;
+            text-align: center;
+
+            cursor: pointer;
+        }
+    }
+}

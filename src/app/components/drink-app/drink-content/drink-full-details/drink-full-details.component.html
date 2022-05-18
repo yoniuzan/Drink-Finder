@@ -1,0 +1,27 @@
+<div class="drink-full-details">
+
+    <div class="drink-full-details__info">
+        <h2 *ngIf="!_drinkSelected"> please choose drink first</h2>
+
+        <ng-container *ngIf="_drinkSelected">
+            <h2> {{_drinkSelected.Name}}</h2>
+
+
+            <span><b>Date:</b> {{_drinkSelected.Date | date:'dd-MM-yyyy'}}</span>
+            <span><b>Name:</b> {{_drinkSelected.Name}}</span>
+
+            <span><b>Category:</b> {{_drinkSelected.Category}}</span>
+
+            <span><b>Glass:</b> {{_drinkSelected.Glass}}</span>
+
+            <p>
+                <b>Ingredients:</b> {{_drinkSelected.Ingredients}}
+            </p>
+
+            <p>
+                <b>Instructions:</b> {{_drinkSelected.Instructions}}
+            </p>
+        </ng-container>
+    </div>
+    <drink-image *ngIf="_drinkSelected" [drink-image]="_drinkSelected.Image"></drink-image>
+</div>

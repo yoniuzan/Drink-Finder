@@ -1,0 +1,15 @@
+<div>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Filter by: {{_filterBy | drinkFilter}}
+        </button>
+        <ul class="dropdown-menu">
+            <li *ngFor="let type of _filterList">
+                <span (click)="onSelectType(type)">{{type | drinkFilter}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <input type="text" placeholder="Search" class="form-control search-input"
+    (keyup)="onSearch($event.target.value)">
+</div>

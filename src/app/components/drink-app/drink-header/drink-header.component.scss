@@ -1,0 +1,41 @@
+.drink-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+
+        color: wheat;
+        background: #333;
+        font-size: 35px;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        width: 100%;
+
+        padding: 0px 35px;
+
+        drink-filter {
+            width: 20%;
+        }
+
+        drink-search {
+            width: 40%;
+        }
+
+        drink-sort-date {
+            width: 20%;
+        }
+    }
+}

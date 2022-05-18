@@ -1,0 +1,21 @@
+.drink-full-details {
+    display: flex;
+    
+    height: 100%;
+    padding: 20px 30px;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
+
+        padding-inline-end: 14px;
+        
+        font-size: 14px;
+        line-height: 23px;
+
+        overflow: scroll;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="drinks-results">
+    <span class="drinks-results__title">Drinks Results</span>
+
+    <span *ngIf="_drinkList.length == 0"> not found</span>
+    <ul *ngIf="_drinkList.length > 0" class="drinks-results__list list-group">
+        <li *ngFor="let drink of _drinkList" class="drinks-results__list__item list-group-item"
+            [ngClass]="{'drinks-results__list__item--selected': _selectedDrinkId == drink.Id}"
+            (click)="onSelectDrink(drink.Id)">
+            <img [src]="drink.Image" width="25" height="25">
+
+            <span class="drinks-results__item">{{drink.Name}} ({{drink.Category}})</span>
+        </li>
+    </ul>
+</div>

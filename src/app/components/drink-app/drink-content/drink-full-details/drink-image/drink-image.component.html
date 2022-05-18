@@ -1,0 +1,3 @@
+<img [src]="_drinkImage" width="250" height="250" (click)="isModalOpen = true">
+
+<app-modal *ngIf="isModalOpen" [image-url]="_drinkImage" (close-modal)="isModalOpen = false"></app-modal>
